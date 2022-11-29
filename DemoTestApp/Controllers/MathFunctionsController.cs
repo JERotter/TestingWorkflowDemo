@@ -8,9 +8,9 @@ namespace DemoTestApp.Controllers;
 [Route("api/[controller]")]
 public class MathFunctionsController : ControllerBase
 {
-    public readonly MathFunctionsService _mathFunctionsService;
+    public readonly IMathFunctionsService _mathFunctionsService;
 
-    public MathFunctionsController(MathFunctionsService mathFunctionsService)
+    public MathFunctionsController(IMathFunctionsService mathFunctionsService)
     {
         _mathFunctionsService = mathFunctionsService;
     }
@@ -22,4 +22,3 @@ public class MathFunctionsController : ControllerBase
         return result;
     }
 }
-
